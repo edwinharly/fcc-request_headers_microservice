@@ -3,6 +3,10 @@
 const express = require('express');
 const app = express();
 
+app.get('/', (req, res) => {
+	res.redirect('/api/whoami');	
+});
+
 app.get('/api/whoami', (req, res) => {
 	let data = {
 		"ipaddress": null,
